@@ -11,7 +11,7 @@ function intro(a,b){
 return this.name + a + b
 }
 
-intro.call(czlowiek, " 3 ", "5")
+intro.call(czlowiek, " 3 ", " 5 ")
 ```
 
 APPLY:
@@ -23,5 +23,20 @@ function intro(a,b){
 return this.name + a + b
 }
 
-intro.call(czlowiek, " 3 ", " 5 ")
+intro.apply(czlowiek, [" 3 ", " 5 "])
 ```
+
+BIND:
+```
+var czlowiek = {name: "jadzia"}
+var czlowiek2 = {name: "józek"}
+
+function intro(a,b){
+return this.name + a + b
+}
+
+var jadziaIntro = intro.bind(czlowiek, ' 4 ',' 7 ')
+
+jadziaIntro()
+```
+
