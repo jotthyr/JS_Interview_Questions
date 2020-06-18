@@ -40,3 +40,15 @@ var jadziaIntro = intro.bind(czlowiek, ' 4 ',' 7 ')
 jadziaIntro()
 ```
 
+1. Write example of closure.
+Domkniecie to dostep do zmiennej, która została stworzona wewnątrz zakresu innej funkcji,która zakończyła już swoje działania.
+```
+function hello(name) {
+  return function(day) {
+    console.log(`Cześ ${name}, jak tam ${day} u Ciebie?`)
+  }
+}
+
+const user = hello("Jan");
+console.log(user("sroda"));
+```
